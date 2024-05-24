@@ -1,4 +1,4 @@
-var API_KEY = '43399505-93fd90124b6ff62a7ea4f0cc3';
+var API_KEY = '44049629-68874dc1d5d3f1658a8c62064';
 
 export async function fetchImage(query) {
   try {
