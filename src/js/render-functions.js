@@ -1,4 +1,3 @@
-import SimpleLightbox from 'simplelightbox';
 
 export function createImageCard(image) {
   const link = document.createElement('a');
