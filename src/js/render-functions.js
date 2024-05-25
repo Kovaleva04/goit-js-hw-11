@@ -1,5 +1,3 @@
-import SimpleLightbox from 'simplelightbox';
-
 export function createImageCard(image) {
   const link = document.createElement('a');
   link.href = image.largeImageURL;
@@ -34,12 +32,13 @@ export function createImageCard(image) {
   return link;
 }
 
-const lightbox = new SimpleLightbox('gallery a');
 export function renderImages(images) {
+  const fragment = document.createDocumentFragment();
   images.forEach(image => {
     const card = createImageCard(image);
-    gallery.appendChild(card);
+    fragment.appendChild(card);
   });
 
-  lightbox.refresh();
+  const gallery = document.querySelector('.gallery');
+  gallery.appendChild(fragment);
 }
