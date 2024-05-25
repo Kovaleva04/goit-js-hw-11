@@ -34,18 +34,12 @@ export function createImageCard(image) {
   return link;
 }
 
-const lightbox = new SimpleLightbox('.gallery a');
-
+const lightbox = new SimpleLightbox('gallery a');
 export function renderImages(images) {
-  const fragment = document.createDocumentFragment();
-
   images.forEach(image => {
     const card = createImageCard(image);
-    fragment.appendChild(card);
+    gallery.appendChild(card);
   });
-
-  const gallery = document.querySelector('.gallery');
-  gallery.appendChild(fragment);
 
   lightbox.refresh();
 }
