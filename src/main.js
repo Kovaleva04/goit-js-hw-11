@@ -36,6 +36,7 @@ form.addEventListener('submit', async evt => {
     captionsData: 'alt',
     captionDelay: 250,
   });
-
+  
+  lightbox.refresh();
   loader.classList.add('hidden');
 });
