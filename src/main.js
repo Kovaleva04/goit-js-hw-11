@@ -28,7 +28,7 @@ form.addEventListener('submit', async evt => {
 
   const images = await fetchImage(query);
   renderImages(images);
-  new SimpleLightbox('.gallery a', {
+  const lightbox = new SimpleLightbox('.gallery a', {
     animationSpeed: 200,
     animationSlide: true,
     disableScroll: false,
@@ -36,7 +36,7 @@ form.addEventListener('submit', async evt => {
     captionsData: 'alt',
     captionDelay: 250,
   });
-  
+
   lightbox.refresh();
   loader.classList.add('hidden');
 });
